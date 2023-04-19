@@ -1,0 +1,4 @@
+.dccache
+.env
+*.sh
+node_modules/
