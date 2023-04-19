@@ -9,7 +9,7 @@ on:
       - 'main'
 
 jobs:
-  lensdx-demo:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -28,5 +28,10 @@ jobs:
       - name: Test
         run: echo "Testing..."
 
-      - name: Deploy
+  deployment:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: deploy
         run: echo "Deploying..."
