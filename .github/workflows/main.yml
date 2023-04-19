@@ -31,7 +31,7 @@ jobs:
   deployment:
     needs: build
     runs-on: ubuntu-latest
-    environment: production
+    environment: prod
     steps:
       - name: deploy
         run: echo "Deploying..."
