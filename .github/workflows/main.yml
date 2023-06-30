@@ -32,6 +32,16 @@ jobs:
       - name: Test
         run: npm test
 
+      - uses: advanced-security/sbom-generator-action@v0.0.1
+        id: sbom
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - uses: actions/upload-artifact@v3.1.0
+        with:
+          path: ${{steps.sbom.outputs.fileName }}
+          name: "SBOM"
+
   deployment:
     needs: build
     runs-on: ubuntu-latest
