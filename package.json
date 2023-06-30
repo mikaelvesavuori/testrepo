@@ -15,7 +15,8 @@
     "url": "git+https://github.com/mikaelvesavuori/testrepo.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "test": "echo \"Error: no test specified\"",
+    "start": "node index.js"
   },
   "dependencies": {
     "standardlint": "1"
