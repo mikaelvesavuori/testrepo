@@ -11,7 +11,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
+    steps:steps:
+      - uses: step-security/harden-runner@55d479fb1c5bcad5a4f9099a5d9f37c8857b2845 # v2.4.1
+        with:
+          egress-policy: audit
+
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -23,10 +27,10 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: echo "Installing dependencies..."
+        run: npm ci
 
       - name: Test
-        run: echo "Testing..."
+        run: npm test
 
   deployment:
     needs: build

@@ -1,0 +1,23 @@
+{
+  "name": "testrepo",
+  "version": "1.0.0",
+  "description": "All kinds of crazy going on here!",
+  "homepage": "https://github.com/mikaelvesavuori/testrepo#readme",
+  "author": "Mikael Vesavuori",
+  "license": "MIT",
+  "main": "index.js",
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/mikaelvesavuori/testrepo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikaelvesavuori/testrepo.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "standardlint": "1"
+  }
+}
