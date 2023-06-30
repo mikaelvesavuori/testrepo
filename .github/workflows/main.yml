@@ -14,7 +14,14 @@ jobs:
     steps:
       - uses: step-security/harden-runner@55d479fb1c5bcad5a4f9099a5d9f37c8857b2845 # v2.4.1
         with:
-          egress-policy: audit
+          # Run the below on your first attempt, then visit the URL and get the recommended settings
+          # egress-policy: audit
+          disable-sudo: true
+          egress-policy: block
+          allowed-endpoints: >
+            api.github.com:443
+            github.com:443
+            registry.npmjs.org:443
 
       - name: Checkout
         uses: actions/checkout@v3
